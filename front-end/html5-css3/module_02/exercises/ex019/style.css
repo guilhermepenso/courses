@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+/*  HTML is id = # in CSS (just one element for a specific tag in one page (can repeat in another page), has priority in hierarchy)
+    HTML is class = . in CSS (many elements, can repeat in different tags and mix with id)
+*/
+
+body {
+    background-color: #c7f7cb;
+    font: arial, helvetica, sans-serif;
+}
+h1 {
+    color: #2f5333;
+}
+
+h1#principal {
+    color: #162517;
+    text-align: center;
+    background-color: #9ccaa1;
+    border-radius: 0.5em;
+    font: bold 3.5em arial, helvetica, sans-serif;
+}
+
+h2 {
+    color: #4b8350;
+}
+
+.basic {
+    color: #4b8350;
+}
+
+.intermediary {
+    color: #7d834b;
+}
+
+.advanced {
+    color: #834b4b;
+}
+
+.highlight {
+    background-color: #2b7e1283;
+    font-weight: bold;
+    border-radius: 0.2em;
+}
+
+p {
+    font: normal normal 1em 'Georgia', "Times New Roman", "Times", serif;
+    text-indent: 2em;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 500px;
+            height: 500px;
+            border: 1.5px dashed black;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Testing iframe uses</h1>
+    <p>
+        Accessing the 
+        <!-- Tamanho padrão 300x150 -->
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" scrolling="yes">
+            <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a>
+        </iframe> site to learn new content
+    </p>
+
+    <p>
+        Maybe Google <iframe src="https://www.google.com" frameborder="0"><a href="https://www.google.com" target="_blank">Google</a></iframe> is also cool, but it doesn't work inside a iframe...
+    </p>
+    <p>
+        My repository on GitHub <iframe src="https://guilhermepenso.github.io/projects/front-end/android/index.html" frameborder="0"><a href="https://guilhermepenso.github.io/projects/front-end/android/index.html">Repositório GitHub Guilherme Penso</a></iframe> is also cool
+    </p>
+    <p>
+        <iframe src="../../../module_03/challenges/chng014/chng014.html" frameborder="0"></iframe>
+    </p>
+</body>
+</html>

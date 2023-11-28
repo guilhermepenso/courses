@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION "3.28.0")
+
+project("HelloWorld")
+
+set(CMAKE_CXX_STANDARD 20)
+
+##  add_executable(HelloWorld main.cpp
+##        Personagens/Animal.cpp
+##        Personagens/Animal.hpp
+##        Personagens/Duck.cpp
+##        Personagens/Duck.hpp)
+
+            ## or ##
+
+##  file(GLOBAL HEADER_PERSONAGENS Personagens/*hpp)
+##  file(GLOBAL SOURCE_PERSONAGENS Personagens/*cpp)
+
+##  add_executable("${PROJECT_NAME}" main.cpp
+##      ${SOURCE_PERSONAGENS}
+##      ${HEADER_PERSONAGENS})
+
+add_executable("${PROJECT_NAME}" "main.cpp")
+
+install(TARGETS "${PROJECT_NAME}" DESTINATION bin)  #${CMAKE_INSTALL_PREFIX}/bin
+install(FILES "main.cpp" DESTINATION src)           #${CMAKE_INSTALL_PREFIX}/scr

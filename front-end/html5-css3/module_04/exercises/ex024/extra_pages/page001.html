@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tables</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.5em; 
+            font-weight: bolder;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+        div#container {
+            
+            overflow-x: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Tables on tiny screens</h1>
+    <div id="container">
+        <table>
+            <caption>Responsive Tables</caption>
+            <thead>
+                <tr>
+                    <th>Products</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV 55"</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Home Teather</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S23</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Galaxy Tab S9 Ultra</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Playstation 5</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Washing Machine</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Amazon Echo</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <a href="#" onclick="clicked()">Click on me</a>
+    <div id="output"></div>
+
+    <script>
+        function clicked() {
+            s = window.document.getElementById("output")
+            s.innerHTML += "<p>You clicked on the output</p>"
+        }
+    </script>
+</body>
+</html>

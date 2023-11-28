@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/bookmarktabs.ico" type="image/x-icon">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: dimgrey;
+
+            border-radius: 2px;
+        }
+
+        header {
+            background-color: whitesmoke;
+
+            padding: 10px;
+            margin: 10px;
+
+            border-radius: 4px;
+        }
+
+        h1 {
+            box-shadow: 11px 14px 20px 0px #00000014;
+
+            border-radius: 4px;
+        }
+
+        nav {
+            background-color: darkgrey;
+
+            padding: 2px;
+
+            border-radius: 4px;
+
+            box-shadow: 5px 3px 8px 1px rgba(0, 0, 0, 0.534);
+        }
+
+        nav > a {
+            text-decoration: none;
+            
+            color: black;
+            margin-right: 30px;
+
+        }
+
+        main {
+            background-color: whitesmoke;
+
+            padding: 10px;
+            margin: 10px;
+
+            border-radius: 20px 0px;
+
+            box-shadow: 1px 1px 1px black;
+        }
+
+        article {
+            background-color: lightgrey;
+
+            padding: 10px 10px 13px 10px;
+
+            border-radius: 4px;
+        }
+
+        article > aside {
+            background-color: grey;
+
+            padding: 10px;
+
+            border-radius: 4px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+
+            padding: 10px;
+            margin: auto;
+
+            border-radius: 4px;
+        }
+
+        footer > p {
+            margin: 0;
+        }
+
+        div#ball {
+            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            border-radius: 50%;
+            box-shadow: inset 10px 10px 10px 20px rgba(97, 95, 97, 0);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-25px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="topics">
+            <h2>Sports Politics and Technology</h2>
+            
+        </section>
+
+        <section id="news">
+            <article>
+                <h2>News about Canada</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur veniam porro quibusdam repellat explicabo doloremque ipsa optio asperiores laudantium consequuntur reprehenderit magni ipsum quod saepe dolorum quasi, facere, non tempora labore nemo iure est minima, vel reiciendis! Ad earum tempora rem quasi vel. Fugit incidunt iste, eos facilis pariatur sed architecto a, recusandae impedit quia, ullam explicabo. Quibusdam est animi cupiditate optio temporibus, iure, exercitationem vitae aut praesentium qui unde architecto? Iusto reiciendis voluptatem exercitationem minus doloribus ullam explicabo facere corrupti voluptas rem magnam, blanditiis iure ex, quasi repellat tempora est nulla sit, inventore numquam. Non, quos consequatur fuga excepturi dolorum sequi incidunt molestiae autem rerum facilis hic quasi maiores officia quaerat provident sint architecto esse! Voluptatum, dolore debitis rerum eum in hic fugiat distinctio itaque quia molestiae dolores laborum sint culpa natus velit tempora facere quam? Earum ducimus culpa minus. Iste officiis aperiam eveniet molestiae fugit magnam vel expedita, rem labore veniam corporis esse totam hic eligendi! Placeat quae non odit reiciendis vitae quos accusamus, voluptatum iure commodi nobis nulla qui voluptates perferendis ipsam dolore facere a perspiciatis odio, laboriosam porro tempora eum beatae officiis. In consequatur voluptatibus, ex illo sint blanditiis exercitationem repellendus rerum earum est nulla tempore.</p>
+                <aside>
+                    Article written by John Paul Jonnes
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Developed by Kyosune</p>
+    </footer>
+    <div id="ball">
+
+    </div>
+</body>
+</html>

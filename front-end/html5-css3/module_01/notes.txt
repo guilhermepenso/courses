@@ -1,0 +1,44 @@
+Usando ! no começo já cria as configurações padrões:
+
+<!DOCTYPE html> --> define que o documento é um HTML para o navegador
+
+<html lang="pt-br"> --> começo do html com lingua utilizada
+
+<head> --> declarações iniciais
+
+    <meta charset="UTF-8"> --> caracteres especiais
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  --> ?
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  --> largura da tela
+
+    <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">  --> ícone da aba, href="" é o local do .ico
+
+    <title></title> --> título na aba
+
+</head>  --> fim das declarações iniciais
+
+<body>  --> começo do corpo do conteúdo da página
+
+    <h1></h1>  --> título principal (melhor usar só um para SEO)
+
+    <h2></h2> --> 
+
+    <hr>  --> linha horizontal para dividir e pular um parágrafo
+
+    <p></p> --> parágrafo para textos   
+
+    <br>  --> quebra para próxima linha
+
+</body> --> fim do corpo do conteúdo
+
+</html>  --> fim do html
+
+símbolos começam com &, como: &lt <p>a</p> &gt
+
+emojis começam com &#
+
+
+
+ <img src="" alt="">  --> colocar imagem, src="" é o local da imagem, alt="" é o texto defnido caso a imagem não carregue ou tenha leitor de tela (isso ajuda no SEO)
+

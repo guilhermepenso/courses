@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../whitesquarebutton.ico" type="image/x-icon">
+    <title>Media in HTML5</title>
+</head>
+<body>
+    <h1>Dynamic Images</h1>
+    <p>Try to open this site in different devices or simply increase and decrease your navigator's size.</p>   
+    <picture>
+        <source media="(max-width: 750px)" srcset="img/photo-s.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="img/photo-m.png" type="image/png">
+        <img src="img/photo-l.png" alt="flexible image">
+    </picture> 
+
+    <h1>Playing Audio</h1>
+    <p>
+        Let's learn how to reproduce audio on HTML5
+    </p>
+    <audio src="media/keep-on-moving.mp3" controls autoplay loop></audio>
+    <!-- MP3 WAV OGG - formats compatible-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="media/dance-dont-delay/dance-dont-delay.mp3" type="audio.mpeg">
+        <p>Unfortunately your navigator is not compatible with this audio format. <a href="media/dance-dont-delay/dance-dont-delay.mp3">Click here to download the MP3 audio.</a></p>
+    </audio>
+</body>
+</html>

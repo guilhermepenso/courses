@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<style>
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    table {
+        width: 700px;
+        border-collapse: collapse;
+        position: relative;
+    }
+
+    
+    th , tfoot {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        padding: 3px 10px;
+        background-color: rgb(58, 58, 59);
+        color: white;
+    }
+
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+    }
+    
+    td {
+        border: 1px solid black;
+        text-align: left;
+        vertical-align: middle;
+        padding: 10px 10px;
+        background-color: white;
+    }
+    
+    td.text_center {
+        text-align: center;
+    }
+    
+    td.text_right {
+        text-align: right;
+    }
+    
+    tbody > tr:nth-child(odd) td{  /* 2n-1  */
+        background-color: white;
+    }
+    
+
+    tbody > tr:nth-child(even) td{  /* 2n */
+        background-color: rgb(189, 186, 186);
+    }
+    
+    td.text_right#total {
+        border: 1px solid black;
+        vertical-align: middle;
+        padding: 3px 10px;
+        background-color: rgb(58, 58, 59);
+        
+    }
+    
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgrey;
+        border: 1px solid black;
+    }
+
+    
+</style>
+
+<body>
+    <h1>Big Tables</h1>
+    <!-- Anatomia para tabelas grandes:
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px">População</th>
+                <th scope="col">% da População Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text_center">1</td>
+                <td>São Paulo</td>
+                <td class="text_right">44.420.459</td>
+                <td class="text_center">21,88%</td>
+            </tr>
+            <tr>
+                <td class="text_center">2</td>
+                <td>Minas Gerais</td>
+                <td class="text_right">20.538.718</td>
+                <td class="text_center">10,11%</td>
+            </tr>
+            <tr>
+                <td class="text_center">3</td>
+                <td>Rio de janeiro</td>
+                <td class="text_right">16.054.524</td>
+                <td class="text_center">7,91%</td>
+            </tr>
+            <tr>
+                <td class="text_center">4</td>
+                <td>Bahia</td>
+                <td class="text_right">14.136.417</td>
+                <td class="text_center">6,96%</td>
+            </tr>
+            <tr>
+                <td class="text_center">5</td>
+                <td>Paraná</td>
+                <td class="text_right">11.443.208</td>
+                <td class="text_center">5,64%</td>
+            </tr>
+            <tr>
+                <td class="text_center">6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="text_right">10.880.506</td>
+                <td class="text_center">5,36%</td>
+            </tr>
+            <tr>
+                <td class="text_center">7</td>
+                <td>Pernambuco</td>
+                <td class="text_right">9.058.155</td>
+                <td class="text_center">4,46%</td>
+            </tr>
+            <tr>
+                <td class="text_center">8</td>
+                <td>Ceará</td>
+                <td class="text_right">8.791.688</td>
+                <td class="text_center">4,33%</td>
+            </tr>
+            <tr>
+                <td class="text_center">9</td>
+                <td>Pará</td>
+                <td class="text_right">8.116.132</td>
+                <td class="text_center">4,1%</td>
+            </tr>
+            <tr>
+                <td class="text_center">10</td>
+                <td>Santa Catarina</td>
+                <td class="text_right">7.609.601</td>
+                <td class="text_center">3,75%</td>
+            </tr>
+            <tr>
+                <td class="text_center">11</td>
+                <td>Goiás</td>
+                <td class="text_right">7.055.228</td>
+                <td class="text_center">3,47%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">12</td>
+                <td>Maranhão</td>
+                <td class="text_right">6.775.152</td>
+                <td class="text_center">3,34%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">13</td>
+                <td>Paraíba</td>
+                <td class="text_right">3.974.495</td>
+                <td class="text_center">1,96%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">14</td>
+                <td>Amazonas</td>
+                <td class="text_right">3.941.175</td>
+                <td class="text_center">1,94%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">15</td>
+                <td>Espírito Santo</td>
+                <td class="text_right">3.833.486</td>
+                <td class="text_center">1,89%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">16</td>
+                <td>Mato Grosso</td>
+                <td class="text_right">3.658.813</td>
+                <td class="text_center">1,8%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">17</td>
+                <td>Rio Grande do Norte</td>
+                <td class="text_right">3.302.406</td>
+                <td class="text_center">1,63%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">18</td>
+                <td>Piauí</td>
+                <td class="text_right">3.269.200</td>
+                <td class="text_center">1,61%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">19</td>
+                <td>Alagoas</td>
+                <td class="text_right">3.127.511</td>
+                <td class="text_center">1,54%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">20</td>
+                <td>Distrito Federal</td>
+                <td class="text_right">2.817.068</td>
+                <td class="text_center">1,39%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">21</td>
+                <td>Mato Grosso do Sul</td>
+                <td class="text_right">2.756.700</td>
+                <td class="text_center">1,36%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">22</td>
+                <td>Sergipe</td>
+                <td class="text_right">2.209.558</td>
+                <td class="text_center">1,09%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">23</td>
+                <td>Rondônia</td>
+                <td class="text_right">1.581.016</td>
+                <td class="text_center">0,78%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">24</td>
+                <td>Tocantins</td>
+                <td class="text_right">1.511.459</td>
+                <td class="text_center">0,74%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">25</td>
+                <td>Acre</td>
+                <td class="text_right">830.026</td>
+                <td class="text_center">0,41%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">26</td>
+                <td>Amapá</td>
+                <td class="text_right">733.508</td>
+                <td class="text_center">0,36%</td>
+            </tr>  
+            <tr>
+                <td class="text_center">27</td>
+                <td>Roraima</td>
+                <td class="text_right">636.303</td>
+                <td class="text_center">0,31%</td>
+            </tr>  
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="2" scope="row">Total de Habitantes</th>
+                <td class="text_right" id="total"><strong>203.062.512</strong></td>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, id tempore omnis dignissimos voluptates ducimus quas accusamus odit mollitia esse veniam amet necessitatibus cumque ad, obcaecati corporis expedita delectus explicabo debitis. Consectetur fuga expedita nobis adipisci eum magni, numquam libero, id unde provident et dignissimos sed tempore, vero nihil reiciendis? Eligendi quisquam amet vel, quibusdam asperiores dolores mollitia minima distinctio excepturi exercitationem cumque aperiam et nesciunt eius vitae rem deleniti non fugiat modi assumenda accusantium expedita temporibus repudiandae? Facere saepe perspiciatis quos rerum, quis ullam eaque esse dolore, delectus hic odit vitae repellendus nisi rem accusantium laboriosam iusto! Quas, cumque!
+        Quae alias tempora vitae aut quidem adipisci, facilis unde sit? Incidunt repellat, totam impedit vitae eveniet eaque modi ipsam quae quaerat? Harum ea qui neque facere quis. Doloribus ab, rerum soluta quia odit, enim, modi qui repellendus commodi ex earum provident sunt laudantium quod eum similique quaerat suscipit asperiores sapiente nam. Animi adipisci fugiat vitae dignissimos odit facere odio excepturi tempore, culpa vel reiciendis rem officiis. Explicabo, quis harum quaerat consequatur temporibus error qui velit dolore ex provident! Consectetur provident mollitia, adipisci ipsam nostrum ad porro corrupti! Mollitia, sapiente? Commodi velit expedita architecto corporis quo optio nostrum recusandae obcaecati ea.
+        Deserunt quo sed saepe animi laborum molestias adipisci quibusdam? Blanditiis ab necessitatibus deleniti officia, nobis temporibus iure consequatur, dolore repudiandae animi tempora ratione, ducimus aspernatur illum sint doloribus quidem dolor. Blanditiis ratione porro repellendus consequuntur deserunt debitis ipsam, cupiditate optio veniam provident error alias tempore sed architecto esse laboriosam doloremque, modi iste eaque. Hic, id laboriosam, dicta debitis illum repellendus itaque alias modi est incidunt sed dolor voluptatibus in pariatur repudiandae. Aspernatur praesentium ab ullam tempora velit ut blanditiis aut perspiciatis, pariatur consequatur suscipit asperiores qui quo nesciunt dolorum quia fugit quae odit nisi minus et alias eveniet! Ex, quos!
+        Animi tenetur quis obcaecati accusamus sapiente dolores debitis, rerum ullam ut culpa. Corrupti eos aliquid libero? Aliquam sed sapiente repellat sequi iure dignissimos fuga aliquid quidem laudantium provident modi similique ab dicta vitae fugit quaerat, natus quae, enim accusamus magnam eveniet velit nesciunt. Non veniam voluptatem placeat, sapiente nostrum magni eius? Sunt, et esse facilis nulla culpa debitis praesentium voluptatum excepturi quaerat quia minima quibusdam porro accusantium neque possimus, quae incidunt reprehenderit ut. Laboriosam consequatur, facilis dicta eligendi quisquam porro, commodi cumque a sapiente harum natus explicabo! Facere repellat placeat eum excepturi, rerum asperiores distinctio iure id nulla voluptates. Est?
+        Nihil vel soluta natus repellendus minus asperiores nam inventore aperiam tempora, esse perferendis porro nostrum reprehenderit eaque, debitis libero dolorum saepe deleniti similique modi quod? Hic repudiandae repellendus, a sint sed dolore voluptate veniam est! Eius corporis, at beatae molestiae doloribus delectus odit sequi aliquid dolorem. Rem voluptatum doloremque voluptates hic quae officiis laudantium tenetur quis commodi. In alias eum sapiente, doloremque consectetur nostrum repudiandae rerum, a voluptatum ipsum aspernatur exercitationem harum deleniti nesciunt perspiciatis et, velit nemo praesentium? Magni aut repellendus cum obcaecati dolorem, distinctio cumque nisi quidem id ex nihil possimus ducimus animi atque rem nostrum temporibus. Earum!
+        Ut numquam omnis blanditiis enim illum exercitationem esse est nemo in nisi quas consectetur fugit ad repellat sed minima vel, ratione nostrum! Excepturi nobis atque, modi cumque id tempore doloribus. Quas rem repellat magnam! Dolore veritatis optio dignissimos laborum, ullam nemo animi, molestiae porro ex dolorem atque hic earum alias vero, necessitatibus vel commodi? Corrupti magni soluta qui iste beatae quo, corporis quibusdam. Laboriosam, ratione soluta fugiat debitis ex architecto beatae perferendis veritatis aspernatur ipsam. Id fugiat laudantium tempora quod, eos dolor laborum aspernatur eaque, illo minima doloremque perferendis illum! Vel unde hic exercitationem quae maiores in perspiciatis accusantium ullam?
+        Excepturi voluptas nihil quas quidem minima soluta. Amet unde reprehenderit, porro numquam dolore vero, dolores eligendi inventore excepturi eum illum minima quo? Nobis obcaecati iure dolores perferendis recusandae impedit ratione dignissimos alias dicta pariatur unde excepturi consequuntur repellendus quia nesciunt dolorum nihil aut mollitia saepe cumque, aliquam temporibus quam. Maiores nulla sit deleniti nihil porro debitis dolor adipisci, velit magnam, nobis architecto aspernatur exercitationem soluta magni voluptates suscipit corrupti error cum ducimus modi delectus? Reprehenderit, laboriosam totam. Deleniti quo quasi dolorum ad magnam, quod accusantium dolor, iusto consectetur amet magni id placeat minus! Quibusdam animi incidunt facere, fugit minima excepturi!
+        Magnam error nesciunt ducimus in laborum, facere voluptates sunt accusamus provident maxime fugiat culpa vel. Placeat at consequatur deserunt, eligendi sequi facilis unde sit numquam perferendis quam reiciendis minima voluptatum atque suscipit adipisci distinctio non assumenda nihil praesentium nostrum. Ipsam quibusdam architecto modi totam quaerat quam nisi recusandae voluptatum laboriosam quasi odio dicta eveniet aliquam provident beatae in eligendi ea qui quod nostrum unde, eius iusto voluptas esse! Aliquid asperiores tenetur accusamus explicabo nihil laboriosam tempore ea provident commodi, nemo minima vitae aliquam ducimus fugit unde ullam cupiditate est. Possimus aut unde, illum recusandae corrupti quam deleniti molestiae quos molestias.
+        Distinctio, repellat enim? Magnam inventore amet quis repudiandae soluta. Nulla voluptas, exercitationem tempore fugiat iusto facilis, doloribus ipsam molestiae earum nostrum magni sequi. Magnam ea ipsum molestiae atque, pariatur consequuntur adipisci dolores dignissimos optio error eveniet esse quidem, commodi provident magni cumque omnis dicta dolor distinctio id cum temporibus, rerum laudantium doloremque. Aliquid explicabo nostrum, commodi dolore porro necessitatibus maxime reprehenderit eveniet iure totam, nisi vel, magnam hic soluta quia. Cupiditate accusantium sit accusamus magni. Sunt sed ab tenetur, officiis voluptas, architecto beatae impedit perspiciatis, blanditiis cumque voluptatibus excepturi laboriosam eaque veniam temporibus cum aspernatur cupiditate dolor maiores id! Id.
+        Illum iste ipsam omnis error ipsum nam accusamus ullam, dolor quidem quos quis eveniet laborum dicta pariatur doloribus rerum sed architecto blanditiis nulla veritatis eaque tenetur itaque dolorem. Aut numquam saepe quidem sapiente, libero animi rerum qui impedit aperiam, velit beatae ducimus blanditiis quaerat tempore praesentium fugiat quibusdam ipsam cupiditate? Dicta vero ducimus quod officiis aperiam? Quam odio accusamus quas exercitationem, sequi, libero natus saepe qui at voluptatum odit totam quia aperiam esse ipsam eum sapiente. Est eveniet, veniam modi optio placeat labore nisi voluptate quibusdam voluptatum architecto non eum quam quos facilis, ratione a animi tempora iste illum amet?
+        Quo inventore, fugiat architecto repellat a, consectetur ullam pariatur itaque facilis tempora voluptate, consequatur cupiditate rem repellendus maxime vero beatae? Aperiam minima facere saepe assumenda quae quidem quo adipisci dolor est a eligendi sapiente provident repellat tempore earum accusamus autem libero omnis, ea aspernatur optio eius quia. Dolores vel facere facilis rem, distinctio ipsa harum accusantium enim magni, excepturi eius voluptas quibusdam rerum pariatur asperiores eos vitae labore incidunt, beatae illo. Molestias accusantium quia quo, atque voluptatibus iste neque est possimus facilis quisquam sint voluptate quasi, autem laborum quos ipsum nihil laboriosam doloremque iusto odio dicta? Dolorum iusto repudiandae tenetur!
+        In totam ullam, quia odio neque rem libero. Atque autem nisi eveniet expedita sunt asperiores temporibus officia voluptas vero magni numquam cumque, quia fugit debitis perspiciatis sint optio placeat facilis ea nobis, accusantium error? Doloribus mollitia facilis corporis dolorum, excepturi sint iusto placeat? Facilis facere aliquam natus, minima esse reiciendis sunt omnis tempora rem deserunt ipsum repudiandae? Dolorem magni consectetur itaque fuga harum aliquam qui deserunt nulla tempora commodi ipsam nostrum temporibus inventore recusandae eaque, nemo animi? Consequatur mollitia vitae non officia nesciunt, deserunt praesentium odit quaerat dolorem est ut commodi ipsum aspernatur quod, maiores ad officiis voluptate? Asperiores, repellat.
+    </p>
+</body>
+</html>

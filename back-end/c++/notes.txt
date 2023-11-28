@@ -1,0 +1,36 @@
+C++ é uma língua mid level, usada para gráficos pesados, é extremamente rápida
+
+#include <iostream> --> serve para incluir comandos básicos de entrada e saída
+
+int main( ){  --> começo do programa
+    return 0;  --> precisa return 0 para encerrar e verificar se tudo ocorreu certo
+}
+
+std::cout << " "; --> cout(command output), ou print
+texto com mais de um caractere como string precisa estar em ""
+texto com um caractere como char precisa estar em ''
+
+cada variável ou texto é separado com <<
+
+para pular linha, pode usar:
+<< '\n'; 
+ou 
+<< std::endl; (will flush the output buffer)
+
+// comentário linha única
+/*
+    comentario 
+    de
+    várias 
+    linhas
+*/
+
+Tipos de dados:
+- int (integer): valor numérico inteiro (se for fracionado, só aparece o inteiro)
+- double (real): valor numérico fracionado (se for inteiro, só aparece inteiro sem fracionar com .00)
+- char (caractere): caractere único, somente usando '' (se passar de um caractere, ocorre overflow e erro na execução)
+- bool (booleano): verdadeiro (1) ou falso (0), declarado com true e false
+- std::string (string): sequência de caracteres, somente usando ""
+
+Const (Const): são variáveis imutáveis após serem definidas (se tentar alterar, o aplicativo crasha), nome da variável deve ser MAIUSCULA
+ex: const double PI = 3.14159;
