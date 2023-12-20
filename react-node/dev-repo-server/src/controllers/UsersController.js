@@ -1,13 +1,17 @@
 import User from "../models/User";
 
+import { createPasswordHash } from "../services/auth";
+
 class UsersController {
     async index(req, res) {
         try {
             const users = await User.find();
             return res.json(users);
-        }   catch(err) {
-                console.error(err);
-                return res.status(500).json({ error: 'Internal server error' });
+        }  catch(err) {
+            console.error(err);
+            return res
+                .status(500)
+                .json({ error: 'Internal server error' });
         } 
     }
     
@@ -22,15 +26,27 @@ class UsersController {
             const user = await User.findOne({ email });
 
             if(user) {
-                return res.status(422).json({ message: 'User ${email} already exists.' });
+                return res
+                    .status(422)
+                    .json({ message: 'User ${email} already exists.' });
             }
 
-            const newUser = await user.create({ email, password});
+            // criptografa o password
+            const encryptedPassword = await createPasswordHash(password)
 
-            return res.status(201).json(newUser);
-        }   catch(err) {
-                console.error(err);
-                return res.status(500).json({error: 'Internal server error'});
+            const newUser = await User.create({ 
+                email, 
+                password: encryptedPassword
+            });
+
+            return res
+                .status(201)
+                .json(newUser);
+        }  catch(err) {
+            console.error(err);
+            return res
+                .status(500)
+                .json({error: 'Internal server error'});
         }     
     }
     
