@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { route } from "express/lib/router";
 
 import HelloController from "./controllers/HelloController";
 import UsersController from "./controllers/UsersController";
