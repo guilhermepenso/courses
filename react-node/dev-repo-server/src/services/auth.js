@@ -6,4 +6,5 @@ export const createPasswordHash = async (password) => {
     return bcrypt.hashSync(password, 8);
 }
 
-
+export const checkPassword = (user, password) => 
+    bcrypt.compare(password, user.password);
