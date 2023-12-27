@@ -9,7 +9,7 @@ import RepositoriesController from "./controllers/RepositoriesController";
 
 const routes = new Router();
 
-routes.put('/sessions', SessionsController.create());
+routes.post('/sessions', SessionsController.create);
 routes.get('/hello', HelloController.index);
 
 routes.use(auth);
