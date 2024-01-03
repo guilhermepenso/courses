@@ -12,7 +12,8 @@
     margin: 0;
 }
 
-#main .search {
+#main .search,
+#main .new {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -47,7 +48,21 @@
 }
 
 #main .repositories .item {
+    display: flex;
+    align-items: center;
     background-color: #f1f1f1;
     border-bottom: 1px solid #d5d5d5;
     padding: .5rem;
+}
+
+#main .repositories .item:last-child {
+    border-bottom: none;
+}
+
+#main .repositories .item .info {
+    flex: 1;
+}
+
+#main .repositories .item .name {
+    font-size: 1.5rem;
 }

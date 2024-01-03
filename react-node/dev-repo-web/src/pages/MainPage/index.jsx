@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import Nav from "./Nav";
+import Search from "./Search";
+import Repositories from "./Repositories";
+
+import { getRepositories } from "../../services/api";
 
 import "./style.css";
 
+const userId = '6590cda17d11da3052d4b2e7';
+
 const MainPage = () => { 
+    const [repositories, setRepositories] = useState([]);
+
+    const loadData = async (query = '') => {
+        const response = await getRepositories(userId);
+
+        console.log(response.data);
+
+        setRepositories(response.data);
+    }
+
+    useEffect(() => {
+        (async () => await loadData())();
+    }, []);
 
     const handleLogout = () => {
         console.log('logout');
@@ -12,45 +33,25 @@ const MainPage = () => {
         console.log('query', query);
     }
 
-    const handleClear = () => {
-        console.log('clear');
+    const handleDeleteRepo = (repository) => {
+        console.log('delete repo', repository);
+    }
+
+    const handleNewRepo = (url) => {
+        console.log('new repo', url);
     }
 
     return (
         <div id="main">
-            <div className="nav">
-                <h1 className="logo">SisRepo</h1>
-                <button onClick={handleLogout}>Sair</button>
-            </div>
+            <Nav onLogout={handleLogout}/>
 
-            <div className="search">
-                <label htmlFor="query">Procurar:</label>
-                <input type="search" name="query" id="query" />
-                <button onClick={handleClear}>Limpar</button>
-                <button onClick={handleSearch}>Procurar</button>
-            </div>
-
-            <div className="repositories">
-                <h2 className='tittle'>Repositórios</h2>
-
-                <ul className="list">
-                    <li className="item">
-                        <div className="info">
-                            <div className="owner">facebook</div>
-                            <div className="name">react</div>
-                        </div>
-                        <button>Apagar</button>
-                    </li>
-
-                    <li className="item">
-                        <div className="info">
-                            <div className="owner">twitter</div>
-                            <div className="name">angular</div>
-                        </div>
-                        <button>Apagar</button>
-                    </li>
-                </ul>
-            </div>
+            <Search onSearch={handleSearch}/>
+            
+            <Repositories 
+                repositories={repositories} 
+                onDeleteRepo={handleDeleteRepo}
+                onNewRepo={handleNewRepo} />
+            
         </div>
     )
 };
