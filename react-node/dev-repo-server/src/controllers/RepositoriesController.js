@@ -44,7 +44,7 @@ class RepositoriesController {
             if (repository) {
                 return res
                 .status(422)
-                .json( { message: 'Repository ${name} already exists.' });
+                .json( { message: `Repository ${name} already exists.` });
             }
 
             const newRepository = await Repository.create({

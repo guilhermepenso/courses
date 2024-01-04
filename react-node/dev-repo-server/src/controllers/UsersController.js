@@ -45,7 +45,7 @@ class UsersController {
             if(user) {
                 return res
                     .status(422)
-                    .json({ message: 'User ${email} already exists.' });
+                    .json({ message: `User ${email} already exists.` });
             }
 
             // criptografa o password

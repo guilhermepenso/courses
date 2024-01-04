@@ -5,10 +5,10 @@ export const api = axios.create({
 });
 
 export const getRepositories = async(userId, query) => {
-    let url = '/users/%{userId}/repositories/'
+    let url = `/users/${userId}/repositories/`
 
     if (query !== '') {
-        url += '?q=${query}';
+        url += `?q=${query}`;
     }
 
     return api.get(url);

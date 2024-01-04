@@ -8,7 +8,7 @@ import { getRepositories } from "../../services/api";
 
 import "./style.css";
 
-const userId = '6590cda17d11da3052d4b2e7';
+const userId = '6596855afa1c86f83bbf6c37';
 
 const MainPage = () => { 
     const [repositories, setRepositories] = useState([]);
@@ -44,9 +44,7 @@ const MainPage = () => {
     return (
         <div id="main">
             <Nav onLogout={handleLogout}/>
-
             <Search onSearch={handleSearch}/>
-            
             <Repositories 
                 repositories={repositories} 
                 onDeleteRepo={handleDeleteRepo}
