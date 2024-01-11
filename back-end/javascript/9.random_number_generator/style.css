@@ -1,0 +1,27 @@
+body{
+    font-family: Verdana;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#myButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+.myLabels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3em;
+}
