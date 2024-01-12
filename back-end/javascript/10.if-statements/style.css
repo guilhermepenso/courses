@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-size: 2em;
+    font-weight: bolder;
+}
+input#myText{
+    max-width: 50px;
+    max-height: 35px;
+    margin: 0px 7px;
+}
+button#mySubmit{
+    max-width: 70px;
+    max-height: 42px;
+}
+p#resultElement{
+    padding-left: 10px;
+}
